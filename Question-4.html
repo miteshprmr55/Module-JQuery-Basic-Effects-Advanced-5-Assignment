@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Question-4</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
+    <script src='https://code.jquery.com/jquery-3.7.1.min.js'></script>
+    <script>
+        $(document).ready(function(){
+            document.getElementById("by").addEventListener("click" , function(){
+                alert("you are clicked in body!");
+            }, false);     
+
+            document.getElementById("dv").addEventListener("click" , function(){
+                alert("you are clicked in div element!");
+            }, false);    
+
+            document.getElementById("ul").addEventListener("click" , function(){
+                alert("you are clicked in ul element!");
+            }, false);    
+
+            document.getElementById("li").addEventListener("click" , function(){
+                alert("you are clicked in li element!");
+            }, false);    
+
+            document.getElementById("btn").addEventListener("click" , function(){
+                alert("you are clicked in span element!");
+            }, false);
+        })
+    </script>
+    
+</head>
+<body>
+
+    <!-- Question-4
+    
+             • Event bubbling tickling example
+    -->
+    
+
+    <h2>Bubbling Event in JQuery</h2> 
+  <fieldset>
+   <fieldset>
+    <div id="by"><h1>body(Big-big-boss)</h1></div>
+    <fieldset style="width: 60%;">
+        <div id="dv"><h1>div(Big-boss)</h1></div>
+        <fieldset>
+            <div id="ul"><h1>ul(Boss)</h1></div>
+            <fieldset>
+                <div id="li"><h1>li(direct Boss)</h1></div>
+                <button id="btn" style="width: 60%; padding: 10px;">span</button>
+            </fieldset>
+        </fieldset>
+    </fieldset>
+   </fieldset>
+   </fieldset>
+
+    
+</body>
+</html>
